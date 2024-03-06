@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 
-import { serializeNonPOJOs } from "$lib/utils.js";
+import { serializeNonPOJOs } from '$lib/utils.ts';
 
 const categorizeResourcesByTags = (resources) => {
     // Initialize categories with a general 'all' category

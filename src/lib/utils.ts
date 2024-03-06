@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { cubicOut } from "svelte/easing";
@@ -13,6 +14,28 @@ type FlyAndScaleParams = {
     start?: number;
     duration?: number;
 };
+
+const { randomBytes } = await import('node:crypto')
+
+// Type was inferred
+export const serializeNonPOJOs = (/** @type {any} */ obj: any) => {
+    return structuredClone(obj)
+};
+
+export const generateUsername = (/** @type {string | any[]} */ name: string | any[]) => {
+    const id = randomBytes(2).toString('hex')
+    if (name.length > 3 ) {
+        return `${name.slice(0, 5)}${id}`
+    } else {
+        return `${name}${id}`
+    }
+}
+
+export const getImageURL = (/** @type {any} */ collectionId: any, /** @type {any} */ recordId: any, /** @type {any} */ fileName: any, size = '0x0') => {
+    return `https://base.astralta.com:443/api/files/${collectionId}/${recordId}/${fileName}?thumb=${size}`;
+};
+
+
 
 export const flyAndScale = (
     node: Element,
