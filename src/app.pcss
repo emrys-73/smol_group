@@ -71,3 +71,13 @@
 .bang {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 0px 100px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Reset Safari default styling for select elements */
+@supports (-webkit-appearance:none) {
+  select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: none; /* Remove default arrow */
+  }
+}

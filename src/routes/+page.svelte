@@ -276,7 +276,7 @@
     </div>
 
     <div class="w-auto xl:min-w-[430px] min-w-[400px] px-2 md:px-4 h-auto justify-center items-center flex">
-        <div class="w-full h-full rounded-2xl dark:bg-[#171718] bg-[#f8f8f8] flex flex-col drop-shadow-xl px-10 py-8 border-opacity-0 bang justify-start items-center">
+        <div class="w-full h-full rounded-2xl dark:bg-[#171718] bg-[#f8f8f8] flex flex-col drop-shadow-xl px-10 py-8 border-opacity-0 bang justify-start items-center relative">
             <div class="w-full h-auto justify-between items-center flex flex-row">
                 <h2 class="text-4xl font-semibold">
                     Prayer Board
