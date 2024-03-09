@@ -235,6 +235,22 @@
                     </div>
 
                     <h3 class="text-2xl font-semibold">
+                        Bücher
+                    </h3>
+
+                    <div class="flex flex-col py-2">
+                        {#each data.res.Buch as r}
+                            {#if r.active}
+                                <a href={r.link} class="hover:bg-[#DD0E39] opacity-70 hover:opacity-100 px-4 rounded-sm flex justify-start flex-row items-center transition-all duration-300 ease-in-out hover:text-white">
+                                    <span class=" text-lg font-medium">
+                                        {r.name}
+                                    </span>
+                                </a>
+                            {/if}
+                        {/each}
+                    </div>
+
+                    <h3 class="text-2xl font-semibold">
                         Sonstiges
                     </h3>
 
